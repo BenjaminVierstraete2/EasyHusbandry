@@ -1,0 +1,1201 @@
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5px;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+::selection {
+    background: #4D94FF;
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+body {
+    background: #5C6666;
+}
+img {
+    max-width: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+
+@media (min-width: 768px) {
+    img{
+        border-radius: 20%;
+    }
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1 {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 12px 0;
+}
+h2.br {
+    margin: 0 0 0 0;
+    font-size: 22px;
+    color: #FFB74D
+}
+h2.title {
+    font-size: 20px;
+}
+
+
+h3 {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 0px;
+}
+
+h4,
+h5{
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0 0 0px;
+}
+h6 {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 24px;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 28px;
+        line-height: 47px;
+
+    }
+    h2{
+        font-size: 24px;
+        line-height: 40px;
+
+    }
+    h3{
+        font-size: 18px;
+        line-height: 32px;
+
+    }
+    h5{
+        font-size: 32px;
+        line-height: 54px;
+
+  
+    }
+}
+
+@media (min-width: 1000px) {
+    h3{
+        font-size: 25px;
+        line-height: 56px;
+    }
+    h5{
+        font-size: 38px;
+        line-height: 70px;
+    }
+}
+
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+}
+
+ul,
+ol {
+    padding-left: 0px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+    font-family: "Times New Roman", serif;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 8px;
+    color: Grey;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #FFA726;
+    width: 100%;
+}
+
+a {
+    color: #FFA726;
+    transition: all .1s ease-in-out;
+}
+
+a:visited,
+a:active {
+    color: #FFA726;
+}
+
+a:hover,
+a:focus {
+    color: #0052CC;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+
+.o-row {
+    padding: 24px 24px 0 24px;
+    display: flow-root;
+}
+
+.o-row__header {
+    background: #2E3333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/* size modifiers */
+
+.o-row--lg {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.o-row--xl {
+    padding-top: 72px;
+    padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+    .o-row {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-row--xl {
+        padding-top: 96px;
+        padding-bottom: 72px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /*max-width: 76.19047619047619em;*/ /* 76.19047619047619 * 21px = 1600px */
+}
+.o-container__form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width:  800px;
+}
+.o-container__cond{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width:  800px;
+}
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+
+
+.o-section {
+    display: flow-root;
+}
+.o-section__one{
+    margin-top: 75px;
+}
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+.o-end{
+    margin-top: 24px;
+    margin-bottom: 70px;
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .o-layout__item {
+        flex-basis: 100%;
+    }
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+    margin: 0 -15px;
+}
+
+.o-layout--gutter > .o-layout__item {
+    padding: 0 15px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+    padding: 0 24px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
+
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/*
+    Component: Component name
+    ---
+    Component description
+*/
+
+/*
+    component: logo
+*/
+
+.c-logo {
+    height: 24px;
+    display: flex;
+}
+
+.c-logo__symbol {
+    height: 100%; 
+}
+@media (min-width: 991px){
+    .c-logo__symbol {
+        display: none; 
+    }
+}
+
+.c-form{
+    display: flex;
+    align-items: center;
+    
+}
+
+.c-inputbox{
+    right: 10px;
+    margin-top: 0px;
+    height: 22px;
+    font-size: 18px;
+    width: 70px;
+    
+    
+}
+.c-inputmetr{
+    width: 40px;
+}
+.c-inputdec{
+    width: 30px;
+}
+.c-inputtime{
+    width: 55px;
+}
+.c-labelfont{
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+@media (min-width: 991px){
+    .c-labelfont{
+        font-size: 22px;
+    }
+    .c-inputbox{
+        right: 10px;
+        margin-top: 0px;
+        height: 30px;
+        font-size: 22px;
+        width: 100px;
+        
+        
+    }
+    .c-inputmetr{
+        width: 70px;
+    }
+    .c-inputdec{
+        width: 50px;
+    }
+    .c-inputtime{
+        width: 70px;
+    }
+}
+/*
+components: header
+*/
+
+.c-header {
+    display: flex;
+    align-items: center;
+
+}
+.c-header__title{
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.c-header__nav,
+.c-header__link {
+    display: none;
+    margin-top: -14px;
+    justify-content: space-evenly;
+}
+
+.c-header__link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media (min-width: 992px) {
+    .c-header__nav,
+    .c-header__link {
+        display: block;
+    }
+    .c-header__title {
+    margin-left: 10px;
+    margin-right: auto;
+
+    }
+
+    .c-header__nav {
+        margin-right: 10px;
+        
+        display: flex;
+        flex-grow: 0.2;
+        justify-content: space-evenly;        
+    } 
+}
+
+ /*
+    
+    comp: nav
+    
+    */
+
+.c-nav {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 8px 0;
+}
+
+
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #14161A;
+}
+
+
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #4D94FF;
+}
+
+@media (min-width: 992px) {
+    .c-nav__list {
+        display: flex;
+    }
+
+    .c-nav__link {
+        padding: 8px 20px;
+    }
+
+    .c-nav__item-color {
+        color: #186FF2;
+
+    }
+}
+   
+.c-mobile-nav{
+    transform: translateX(-125%);
+    position: fixed;
+    top: 81px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding: 0px;
+    width: 100vw;
+    background-color: #5C6666;
+    transition: .25s;
+}
+.hamburger .c-mobile-nav{
+    transform: translateX(0);
+}
+
+.c-mobile-list {
+    margin-top: 60px;
+    text-align: center;
+    list-style-type: none;
+
+}
+.c-site-list{
+    text-align: center;
+    list-style-type: none;
+}
+
+.c-mobile-link{
+    text-decoration: none;
+    font-size: 18px;
+    
+    
+}
+.c-form{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+}
+/*
+    Component: Light
+    
+*/
+
+.c-light {
+    position: relative;
+}
+
+.c-light-link {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.c-light-links {
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .c-light__figure {
+        display: none;
+    }
+}
+
+.c-boxed {
+    display: inline-block;
+    width: 115px;
+    height: 90px;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    background: #474F4F;
+    
+}
+.c-boxed2 {
+    display: inline-block;
+    width: 115px;
+    height: 90px;
+    text-align: center;
+    
+}
+
+.c-boxed__small{
+    display: inline-block;
+    width: 115px;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    background: #474F4F;
+    margin-bottom: 10px;
+}
+.c-orange {
+    color: #FFA726;
+}
+.c-black {
+    color: black;
+}
+.c-picture{
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.c-center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (min-width: 350px) {
+    .c-boxed,
+    .c-boxed2,
+    .c-boxed__small{
+        width: 130px;
+    }
+    
+}
+@media (min-width: 400px) {
+    .c-boxed,
+    .c-boxed2,
+    .c-boxed__small{
+        width: 150px;
+    }
+    
+}
+@media (min-width: 768px) {
+    .c-boxed,
+    .c-boxed2{
+        width: 250px;
+        height: 120px;
+    }
+    .c-boxed__small{
+        width: 250px;
+        height: 55px;
+    }
+    .c-picture{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 55px 20px 0 20px;
+    }
+}
+
+
+@media (min-width:  991px) {
+    .c-boxed,
+    .c-boxed2{
+        margin-top: 60px;
+        width: 350px;
+        height: 180px;
+    }
+    .c-boxed__small{
+        width: 350px;
+        height: 85px;
+    }
+    .c-picture{
+        max-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-lead {
+    position: relative;
+}
+
+.c-lead--md {
+    font-size: 18px;
+    line-height: 32px;
+    color: #186FF2;
+}
+
+.c-lead--lg {
+    font-size: 24px;
+    line-height: 32px;
+    color: #45484D;
+}
+
+.c-lead--xl {
+    font-size: 52px;
+    line-height: 64px;
+    font-weight: 700;
+    color: #14161A;
+}
+
+@media (min-width: 768px) {
+    .c-lead--xl {
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-lead--xl {
+        font-size: 66px;
+        line-height: 80px;
+    }
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-sm {
+    max-width: 36em !important;
+}
+
+.u-max-width-md {
+    max-width: 45em !important;
+}
+
+.u-max-width-lg {
+    max-width: 60em !important;
+}
+
+.u-max-width-xl {
+    max-width: 75em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+/*
+    Utility: Flex
+    ---
+    Utility classes to put specific flex properties onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-flex-basis-auto {
+    flex-basis: auto !important;
+}
+
+.u-flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.u-1-of-2 {
+    flex-basis: calc(100% / 2) !important;
+}
+
+.u-1-of-3 {
+    flex-basis: calc(100% / 3) !important;
+}
+
+.u-2-of-3 {
+    flex-basis: calc(100% / 3 * 2) !important;
+}
+
+.u-1-of-4 {
+    flex-basis: calc(100% / 4) !important;
+}
+
+.u-3-of-4 {
+    flex-basis: calc(100% / 4 * 3) !important;
+}
+
+.u-1-of-5 {
+    flex-basis: calc(100% / 5) !important;
+}
+
+.u-2-of-5 {
+    flex-basis: calc(100% / 5 * 2) !important;
+}
+
+.u-3-of-5 {
+    flex-basis: calc(100% / 5 * 3) !important;
+}
+
+.u-4-of-5 {
+    flex-basis: calc(100% / 5 * 4) !important;
+}
+
+.u-1-of-6 {
+    flex-basis: calc(100% / 6) !important;
+}
+
+.u-5-of-6 {
+    flex-basis: calc(100% / 6 * 5) !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp1 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp1 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp1 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp1 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp1 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp1 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp1 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp2 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp2 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp2 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp2 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp2 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp2 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp2 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp3 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp3 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp3 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp3 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp3 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp3 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp3 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp4 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp4 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp4 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp4 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp4 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp4 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp4 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

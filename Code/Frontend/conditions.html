@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sensors</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/screen.css" />
+  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+  <script src="script/conditions.js"></script>
+</head>
+
+<body>
+  <header class= "o-row o-row__header">
+    <div class="o-container">
+      <div class="c-header">
+        <div class="c-header__logo">
+          <h1 class="c-logo">
+            <svg class="c-logo__symbol js-toggle-nav" xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
+              <path id="path" d="M3,18H21V16H3v2Zm0-5H21V11H3v2ZM3,6V8H21V6Z" transform="translate(-3 -6)" fill="#fff" fill-rule="evenodd"/>
+            </svg> 
+          </h1>
+        </div>
+        <div class="c-header__title">
+          <h1>Conditions terrarium</h1>
+        </div>
+        <div class="c-header__nav">
+            <li class="c-site-list"><a class="c-orange c-mobile-link" href="conditions.html">Conditions</a></li>
+            <li class="c-site-list"><a class="c-orange c-mobile-link" href="configuration.html">Configuration</a></li>
+            <li class="c-site-list"><a class="c-orange c-mobile-link" href="statistics.html">Statistics</a></li>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="o-row">
+    <div class="o-container__cond">
+      <article class="o-section o-section__one">
+        <div class="o-layout o-layout--align-center o-layout--gutter o-layout--justify-center o-layout--justify-space-evenly">
+          <div class="o-layout__item c-center u-1-of-3 u-2-of-5-bp1 ">
+            <div class="c-boxed">
+              <h3>Temperature</h3>
+              <h5 class="c-orange js-temp">00°C</h5>
+            </div>
+          </div>
+          <div class="o-layout__item  c-center u-1-of-3 u-2-of-5-bp1 ">
+            <div class="c-boxed">
+              <h3>Humidity</h3>
+              <h5 class="c-orange js-hum">00%</h5>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="o-section">
+        <div class="o-layout o-layout--align-center o-layout--gutter o-layout--justify-center o-layout--justify-space-evenly">
+          <div class="o-layout__item c-center u-1-of-3 u-2-of-5-bp1">
+            <div class="c-boxed">
+              <h3>Brightness</h3>
+              <h5 class="c-orange js-light">00%</h5>
+            </div>
+          </div>
+          <div class="o-layout__item c-center  u-1-of-3 u-2-of-5-bp1">
+            <div class="c-boxed2">
+              <div class="c-boxed__small">
+                <div class="o-layout o-layout--align-center o-layout--justify-center">
+                  <div class="o-layout__item u-1-of-3">
+                    <h3>Fan</h3>
+                  </div>
+                  <div class="o-layout__item u-1-of-3">                
+                    <h3 class="c-orange js-fan">00</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="c-boxed__small">
+                <div class="o-layout o-layout--align-center o-layout--justify-center">
+                  <div class="o-layout__item o-layout--align-center u-1-of-3">
+                    <h3>Lamp</h3>
+                  </div>
+                  <div class="o-layout__item o-layout--align-center u-1-of-3">                
+                    <h3 class="c-orange js-lamp">00</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </article>
+        <figure class="o-section c-center">
+          <picture>
+              <img class="c-picture" src="img/salamandra.jpg" alt="Salamandra atra">
+          </picture>
+        </figure>
+      </div> 
+      <article>
+        <div class="c-mobile-nav">
+            <ul>
+                <li class="c-mobile-list"><a class="c-orange c-mobile-link" href="configuration.html">Configuration</a></li>
+                <li class="c-mobile-list"><a class="c-orange c-mobile-link" href="statistics.html">Statistics</a></li>
+            </ul>
+        </div>
+    </article>
+    </section>
+  </body>
+</html>
